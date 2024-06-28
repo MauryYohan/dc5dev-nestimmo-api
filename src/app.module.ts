@@ -10,7 +10,7 @@ import { UserModule } from './user/user.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
-      type:'postgres',
+      type: 'postgres',
       host: process.env.DB_HOST,
       port: parseInt(process.env.PORT),
       username: process.env.DB_USER,
@@ -20,7 +20,7 @@ import { UserModule } from './user/user.module';
       synchronize: true,
     }),
     PostModule,
-    UserModule
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
